@@ -26,6 +26,8 @@ SECRET_KEY = '2-7bs*3x*#@+r60u(z1-6-m%ml%u4il4jweuxc0kd4!y-ub*qi'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "blockabl.net",
+    "www.blockabl.net",
     "blockabl.herokuapp.com",
     "127.0.0.1",
 ]
