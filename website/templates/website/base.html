@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="{% static "website/style.css" %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark navig">
     <div class="container-fluid mx-1">
-        <a class="navbar-brand" href="#">blockabl.</a>
+        <a class="navbar-brand" href="{% url "index" %}">blockabl.</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -51,7 +53,7 @@
 {% block content %}{% endblock %}
 <footer class="footer">
     <div class="container my-3">
-        <span class="text-muted">Copyright by blockabl.net 2021 ©</span>
+        <span class="text-muted">© 2021 Blockabl</span>
     </div>
 </footer>
 <!-- JavaScript Bundle with Popper -->

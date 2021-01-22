@@ -82,13 +82,15 @@ WSGI_APPLICATION = 'blockabl.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'de3dr0dla1i8g8',
+        'USER': 'qlmqgpaitexoxu',
+        'PASSWORD': 'b63673fda529dc52b4e86d05f617ff9652d5df4ccd807c6084350ba6545a6c9b',
+        'HOST': 'ec2-52-208-138-246.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
-
-
-# Password validation
+        # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
