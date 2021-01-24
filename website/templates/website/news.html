@@ -3,21 +3,5 @@
 {% block title %}blockabl. - News{% endblock %}
 {% block content %}
     <h1 style="text-align: center" class="monserrat-font mt-3">News</h1><hr class="mx-5">
-    <h2 class="monserrat-font mt-2" style="margin-left: 20px">Our Minigames</h2>
-
-    <div class="row row-cols-1 row-cols-md-3 g-4 mx-2">
-        {% for minigame in minigames %}
-            <div class="col">
-                <div class="card h-100">
-                    <img src="{% with "website/"|add:minigame.photo as photo %}{% static photo %}{% endwith %}"
-                         class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ minigame.title }}</h5>
-                        <p class="card-text">{{ minigame.short_desc }}</p><br>
-                        <a href="/minigame/{{ minigame.pk }}"><button class="btn btn-primary">Read More...</button></a>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
+    <h4 style="text-align: center" class="monserrat-font mt-5">Server News will appear here.</h4>
 {% endblock %}

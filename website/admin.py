@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Minigame
+from .models import Gamemode
 
-admin.site.register(Minigame)
+admin.site.register(Gamemode)

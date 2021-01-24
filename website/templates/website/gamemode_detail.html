@@ -1,0 +1,9 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block title %}blockabl. - {{ gamemode.title }}{% endblock %}
+{% block content %}
+    <img style="position: fixed; width: 100%"
+         src="{% with "website/gamemodes/"|add:gamemode.photo as photo %}{% static photo %}{% endwith %}" alt="picture">
+    <h1 style="text-align: center" class="mt-3 monserrat-font mg-text">{{ gamemode.title }}</h1>
+    <div style="text-align: center; color: black" class="mt-2 mx-5 monserrat-font mg-text">{{ gamemode.desc }}</div>
+{% endblock %}

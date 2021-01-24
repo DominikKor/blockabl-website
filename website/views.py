@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from .models import Minigame
+from .models import Gamemode
 
 
 def index(request):
@@ -7,12 +7,16 @@ def index(request):
 
 
 def news(request):
-    minigames = Minigame.objects.all()
-    return render(request, "website/news.html", {"minigames": minigames})
+    return render(request, "website/news.html")
 
 
-def minigame(request, id):
-    return render(request, "website/minigame.html", {"minigame": Minigame.objects.get(pk=id)})
+def gamemodes(request):
+    all_gamemodes = Gamemode.objects.order_by("id")
+    return render(request, "website/gamemodes.html", {"gamemodes": all_gamemodes})
+
+
+def gamemode_detail(request, name):
+    return render(request, "website/gamemode_detail.html", {"gamemode": Gamemode.objects.get(url=name)})
 
 
 def forum(request):

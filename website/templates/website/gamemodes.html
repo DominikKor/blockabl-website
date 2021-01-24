@@ -1,0 +1,22 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block title %}blockabl. - Gamemodes{% endblock %}
+{% block content %}
+    <h1 style="text-align: center" class="monserrat-font mt-3">Our Gamemodes</h1><hr class="mx-5">
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mx-2">
+        {% for gamemode in gamemodes %}
+            <div class="col">
+                <div class="card h-100">
+                    <img src="{% with "website/gamemodes/"|add:gamemode.photo as photo %}{% static photo %}{% endwith %}"
+                         class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ gamemode.title }}</h5>
+                        <p class="card-text mg-desc mb-0">{{ gamemode.desc }}</p><br>
+                        <a class="mt-n3" href="/gamemode/{{ gamemode.url }}"><button class="btn btn-primary">Read More...</button></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

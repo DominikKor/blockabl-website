@@ -46,3 +46,9 @@ body {
     display: inline;
     padding-top: 50px;
 }
+
+.mg-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
