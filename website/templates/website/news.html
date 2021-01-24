@@ -14,10 +14,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ minigame.title }}</h5>
                         <p class="card-text">{{ minigame.short_desc }}</p><br>
-                        <form method="POST">
-                            <input type="hidden" name="mg-read-more">
-                            <input type="submit" class="btn btn-primary" name="{{ minigame.pk }}" value="Read More">
-                        </form>
+                        <a href="/minigame/{{ minigame.pk }}"><button class="btn btn-primary">Read More...</button></a>
                     </div>
                 </div>
             </div>

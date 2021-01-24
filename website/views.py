@@ -1,10 +1,8 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .models import Minigame
 
+
 def index(request):
-    if request.method == "POST":
-        if request.POST.get("mg-read-more"):
-            return None
     return render(request, "website/index.html")
 
 
@@ -13,8 +11,8 @@ def news(request):
     return render(request, "website/news.html", {"minigames": minigames})
 
 
-def minigame(request):
-    pass
+def minigame(request, id):
+    return render(request, "website/minigame.html", {"minigame": Minigame.objects.get(pk=id)})
 
 
 def forum(request):

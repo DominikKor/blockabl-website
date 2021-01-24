@@ -23,6 +23,13 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.mg-text {
+    text-align: center;
+    z-index: 1000;
+    position: relative;
+    color: white;
+}
+
 .jointxt {
     position: relative;
     z-index: 1000;

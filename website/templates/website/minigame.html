@@ -1,0 +1,9 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block title %}blockabl. - {{ minigame.title }}{% endblock %}
+{% block content %}
+    <img style="position: fixed; width: 100%"
+         src="{% with "website/"|add:minigame.photo as photo %}{% static photo %}{% endwith %}" alt="picture">
+    <h1 style="text-align: center" class="mt-3 monserrat-font mg-text">{{ minigame.title }}</h1>
+    <div style="text-align: center; color: black" class="mt-2 monserrat-font mg-text">{{ minigame.short_desc }}</div>
+{% endblock %}
