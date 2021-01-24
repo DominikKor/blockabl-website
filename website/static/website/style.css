@@ -23,12 +23,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.mg-text {
-    text-align: center;
-    z-index: 1000;
-    position: relative;
-    color: white;
-}
 
 .jointxt {
     position: relative;
@@ -47,7 +41,18 @@ body {
     padding-top: 50px;
 }
 
-.mg-desc {
+.gm-header {
+    color: white;
+    position: relative;
+    text-align: center;
+    font-size: 70px;
+}
+
+td {
+    width: 25%;
+}
+
+.gms-short-desc {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

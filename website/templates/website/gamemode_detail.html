@@ -2,8 +2,12 @@
 {% load static %}
 {% block title %}blockabl. - {{ gamemode.title }}{% endblock %}
 {% block content %}
-    <img style="position: fixed; width: 100%"
-         src="{% with "website/gamemodes/"|add:gamemode.photo as photo %}{% static photo %}{% endwith %}" alt="picture">
-    <h1 style="text-align: center" class="mt-3 monserrat-font mg-text">{{ gamemode.title }}</h1>
-    <div style="text-align: center; color: black" class="mt-2 mx-5 monserrat-font mg-text">{{ gamemode.desc }}</div>
+    <div style="position: absolute; width: 100%"><h1 class="mt-3 monserrat-font gm-header">{{ gamemode.title }}</h1></div>
+    <img style="width: 100%"
+         src="{% with "website/gamemodes/"|add:gamemode.photo as photo %}{% static photo %}{% endwith %}"
+         alt="{{ gamemode.photo_alt }}">
+    <h4 class="mx-5 mt-4">Description</h4><hr class="mx-5">
+    <div class="mt-2 mx-5 monserrat-font gm-desc">
+        <h5>{{ gamemode.desc }}</h5>
+    </div>
 {% endblock %}
